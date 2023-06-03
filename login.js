@@ -1,4 +1,4 @@
-const formLogin = document.getElementsByClassName("formLogin")
+const formLogin = document.getElementById("formLogin")
 // Pega o formulário 
 
 formLogin.addEventListener("submit", function() {
