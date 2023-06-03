@@ -4,11 +4,7 @@ history.replaceState(null, '', './home.html');
 document.addEventListener("DOMContentLoaded", () => {
 const imageStatic = document.getElementById("imageStatic");
 const imageProfile = document.querySelector("#imageProfile");
-<<<<<<< HEAD
 const selectFile = document.getElementById("selectFile");
-=======
-const selectFile = document.getElementsByClassName("selectFile");
->>>>>>> new
 
 imageProfile.addEventListener("change", function () {
     const imgProfile = new FileReader();
@@ -60,15 +56,13 @@ divPhone.innerHTML =
 `;
 infoProfile.appendChild(divPhone);
 
-<<<<<<< HEAD
-=======
 const h1 = document.querySelector("h1");
 h1.textContent = 
 `
     Bem-vindo(a)${userName}
 `
 
->>>>>>> new
+
 
 
 
