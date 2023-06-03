@@ -1,0 +1,145 @@
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.containerProfile {
+  width: 50vw;
+  height: 100vh;
+  max-width: 800px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.headerProfile {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#imageStatic {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+}
+
+.headerProfile input[type="file"] {
+  display: none;
+}
+
+.selectFile {
+  position: absolute;
+  bottom: -10px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+}
+
+.infoProfile {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#infoDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+#infoDiv label {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .containerProfile {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  #imageStatic {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 10px;
+  }
+
+  #selectFile {
+    position: static;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .infoProfile {
+    height: auto;
+    padding: 10px;
+    margin-bottom: 25%;
+  }
+
+  #infoDiv {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  #infoDiv label {
+    font-size: 14px;
+  }
+
+  #infoDiv p {
+    font-size: 16px;
+  }
+}

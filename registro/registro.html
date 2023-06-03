@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="registro.js"></script>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <main>
+        <div class="formLogin">
+            <section>
+                <h1>Registro</h1>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu nome" required>
+                <label for="cellphone">Celular</label>
+                <input type="tel" name="cellphone" id="cellphone" placeholder="(xx) xxxxx-xxxx">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                <label for="confirmpassword">Confirmar Senha</label>
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Digite sua senha novamente" required>
+                <input type="submit" value="Cadastrar" id="btnRegister" onclick="saveData()">
+            </section>
+        </form>
+        </div>
+    </main>
+</body>
+</html>
