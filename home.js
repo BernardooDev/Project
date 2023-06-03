@@ -56,6 +56,12 @@ divPhone.innerHTML =
 `;
 infoProfile.appendChild(divPhone);
 
+const h1 = document.querySelector("h1");
+h1.textContent = 
+`
+    Bem-vindo(a)${userName}
+`
+
 
 
 
