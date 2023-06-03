@@ -1,26 +1,19 @@
-const formLogin = document.getElementById("formLogin")
-// Pega o formulário 
+const formLogin = document.getElementById("formLogin");
+const btnLogin = document.getElementById("btnLogin");
 
-formLogin.addEventListener("submit", function() {
+btnLogin.addEventListener("click", function(e) {
     e.preventDefault();
-// Previne o formulário de ficar recarregando a página
 
     var storedEmail = localStorage.getItem('email');
     var storedPassword = localStorage.getItem('password');
-// Armazenda os dados que foram colocados anteriormentes em uma váriavel 
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-// Pega os valores de cada input
 
     if (email === storedEmail && password === storedPassword) {
         alert('Login bem-sucedido!');
-        this.submit();
-
-// Verifica se os valores de cada campo são coincidente ao dados armazenados 
-
+        formLogin.submit();
     } else {
         alert('Email ou senha inválidos. Tente novamente!');
     }
-// Caso não sejam coincidente, informa o usuário.
 });
