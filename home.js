@@ -4,7 +4,7 @@ history.replaceState(null, '', './home.html');
 document.addEventListener("DOMContentLoaded", () => {
 const imageStatic = document.getElementById("imageStatic");
 const imageProfile = document.querySelector("#imageProfile");
-const selectFile = document.getElementById("selectFile");
+const selectFile = document.getElementsByClassName("selectFile");
 
 imageProfile.addEventListener("change", function () {
     const imgProfile = new FileReader();
