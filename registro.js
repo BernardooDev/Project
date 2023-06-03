@@ -22,10 +22,17 @@ async function saveData() {
         alert('Dados cadastrados com sucesso!');
 // Aviso de dados cadastrados e armazenados no localStorage
 
+<<<<<<< HEAD
         window.location.href="./login.html";
+=======
+        window.location.href="/login/login.html";
+>>>>>>> new
 // Redirecionando o usuário ao login 
     }
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> new
