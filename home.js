@@ -1,68 +1,65 @@
-history.replaceState(null, '', './home.html');
+history.replaceState(null, "", "./home.html");
 // Limpar os parâmetros de email e senha na URL.
+const token = localStorage.getItem("token");
 
-document.addEventListener("DOMContentLoaded", () => {
-const imageStatic = document.getElementById("imageStatic");
-const imageProfile = document.querySelector("#imageProfile");
-const selectFile = document.getElementById("selectFile");
+if (!token) {
+  alert("Você não está autenticado");
+  window.location.href="registro.html";
+} else {
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageStatic = document.getElementById("imageStatic");
+    const imageProfile = document.querySelector("#imageProfile");
+    const selectFile = document.getElementById("selectFile");
 
-imageProfile.addEventListener("change", function () {
-    const imgProfile = new FileReader();
+    imageProfile.addEventListener("change", function () {
+      const imgProfile = new FileReader();
 
-    imgProfile.addEventListener("load", () => {
+      imgProfile.addEventListener("load", () => {
         imageStatic.setAttribute("src", imgProfile);
         localStorage.setItem("imgProfile", imgProfile.result);
-        window.location.reload()
+        window.location.reload();
+      });
+
+      imgProfile.readAsDataURL(this.files[0]);
     });
 
-    imgProfile.readAsDataURL(this.files[0]);
-})
+    const newImgProfile = localStorage.getItem("imgProfile");
+    if (newImgProfile) {
+      imageStatic.setAttribute("src", newImgProfile);
+    }
+  });
 
-const newImgProfile = localStorage.getItem("imgProfile");
-    if(newImgProfile) {
-        imageStatic.setAttribute("src", newImgProfile);
-    }  
-});
+  const infoProfile = document.querySelector(".infoProfile");
+  const userName = localStorage.getItem("name");
+  const userEmail = localStorage.getItem("email");
+  const userPhone = localStorage.getItem("cellphone");
 
-const infoProfile = document.querySelector(".infoProfile")
-const userName = localStorage.getItem("name");
-const userEmail = localStorage.getItem("email");
-const userPhone = localStorage.getItem("cellphone")
-
-const divName = document.createElement("div");
-divName.setAttribute("id","infoDiv");
-divName.innerHTML =
-`
+  const divName = document.createElement("div");
+  divName.setAttribute("id", "infoDiv");
+  divName.innerHTML = `
     <label for="userEmail">Nome:</label>
     <p id="userName">${userName}</p>
 `;
-infoProfile.appendChild(divName);
+  infoProfile.appendChild(divName);
 
-const divEmail = document.createElement("div");
-divEmail.setAttribute("id","infoDiv");
-divEmail.innerHTML =
-`
+  const divEmail = document.createElement("div");
+  divEmail.setAttribute("id", "infoDiv");
+  divEmail.innerHTML = `
     <label for="userEmail">Email:</label>
     <p id="userEmail">${userEmail}</p>
 `;
-infoProfile.appendChild(divEmail);
+  infoProfile.appendChild(divEmail);
 
-const divPhone = document.createElement("div");
-divPhone.setAttribute("id","infoDiv");
-divPhone.innerHTML =
-`
+  const divPhone = document.createElement("div");
+  divPhone.setAttribute("id", "infoDiv");
+  divPhone.innerHTML = `
     <label for="userEmail">Celular:</label>
     <p id="userEmail">${userPhone}</p>
 `;
-infoProfile.appendChild(divPhone);
+  infoProfile.appendChild(divPhone);
 
-const h1 = document.querySelector("h1");
-h1.textContent = 
-`
+  const h1 = document.querySelector("h1");
+  h1.textContent = `
     Bem-vindo(a)${userName}
-`
-
-
-
-
-
+`;
+}

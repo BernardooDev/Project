@@ -16,4 +16,4 @@ btnLogin.addEventListener("click", function(e) {
     } else {
         alert('Email ou senha inválidos. Tente novamente!');
     }
-});
+}); 
