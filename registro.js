@@ -1,7 +1,7 @@
 const btnRegister = document.getElementById("btnRegister")
 // Pegando o elemento de botão 
 
-async function saveData() {
+function saveData() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var cellphone = document.getElementById("cellphone").value
@@ -17,11 +17,10 @@ async function saveData() {
         localStorage.setItem('cellphone', cellphone);
         localStorage.setItem('password', password);
         localStorage.setItem('confirmpassword', confirmpassword);
+        localStorage.setItem('token','token')
 // Adicionando o valores no localStorage
-
         alert('Dados cadastrados com sucesso!');
 // Aviso de dados cadastrados e armazenados no localStorage
-
         window.location.href="./login.html";
 // Redirecionando o usuário ao login 
     }
